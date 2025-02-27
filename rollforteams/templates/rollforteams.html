@@ -1,0 +1,75 @@
+
+{% load static %}
+
+
+{% block content %}
+<!-- Include your custom JavaScript -->
+ 
+<script src="{% static '/js/animations.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<div class="container">
+    <h1>Roll for Teams</h1>
+    
+    <div class="main-sections">
+        <!-- Inputs Section -->
+        <div class="section">
+            <h2>Inputs</h2>
+            <div class="add-player">
+                <input type="text" id="playerName" placeholder="Enter player name">
+                <button onclick="addPlayer()">Add Player</button>
+                <button id="shuffle-btn" onclick="shufflePlayers()">Shuffle</button>
+                <button id="clear-btn" onclick="clearPlayers()">Clear List</button>
+            </div>
+
+            <ul id="playerPool"></ul>
+        </div>
+
+        <!-- Controller Section -->
+        <div class="section">
+
+                <!-- Wheel Section -->
+    <div class="wheel-container">
+        <canvas id="wheel"></canvas>
+    </div>
+
+    <div class="controls">
+        <h2>Controls</h2>
+        <button onclick="spinWheel()" class="start-button">Start</button>
+        <!-- Checkboxes Section -->
+
+        
+        <!-- Team Count Selector -->
+        <div class="team-count-selector">
+          <label>Number of Teams:</label>
+          <span id="team-count" class="team-count-number">2</span>
+
+          <div class="count-control">
+            <div class="arrow-stack">
+ 
+              <!-- Up arrow (increase) -->
+              <button id="increase-teams" class="arrow">&uarr;</button>
+              <!-- Down arrow (decrease) -->
+              <button id="decrease-teams" class="arrow">&darr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+<!-- Container for team boxes -->
+<div id="teamsContainer"></div>
+
+        </div>
+
+        <!-- Results Section -->
+        <div class="section">
+            <h2>Teams</h2>
+            <div id="teams" class="teams-container">
+                <!-- Dynamically generated teams will appear here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
