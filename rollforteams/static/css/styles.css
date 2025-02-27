@@ -80,14 +80,23 @@ ul {
     padding: 0;
   }
   
-  li {
-    display: flex;
-    justify-content: space-between;
-    background: #F0F0F0;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
+li {
+  display: flex;
+  justify-content: space-between;
+  background: #F0F0F0;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.teams-li {
+  display: flex;
+  justify-content: space-between;
+  background: #F0F0F0;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 /* Teams Container */
 #teamsContainer {
@@ -98,25 +107,21 @@ ul {
     margin-top: 10px;
   }
 
-/* Team Box Styling */
-.team-box:nth-child(1) { background: #83CA9F; }  /* Soft Green */
-.team-box:nth-child(2) { background: #D6A14A; }  /* Warm Golden */
-.team-box:nth-child(3) { background: #ECB06C; }  /* Peach */
-.team-box:nth-child(4) { background: #D75A66; }  /* Pinkish Red */
-.team-box:nth-child(5) { background: #EBE89A; }  /* Light Yellow */
-.team-box {
-  flex: 1;
-  min-width: 250px;
-  max-width: 400px;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+  .team-box {
+    background-color: #f8f8f8;  /* A light, neutral gray */
+    color: #333;                /* Darker text for contrast */
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
 
 /* Pool & Teams */
 .pool, .teams {
@@ -145,7 +150,7 @@ ul {
 /* Player Assign Animation */
 .player-assign {
     font-weight: bold;
-    background-color: #D75A66; /* Pinkish Red */
+    background-color: #f8f8f8; /* Pinkish Red */
     padding: 8px;
     margin-top: 5px;
     border-radius: 5px;
@@ -217,14 +222,6 @@ canvas {
 }
 
 /* Unique Team Colors */
-.team-box:nth-child(1) { background: #FF5733; } /* Red-Orange */
-.team-box:nth-child(2) { background: #33A8FF; } /* Blue */
-.team-box:nth-child(3) { background: #33FF57; } /* Green */
-.team-box:nth-child(4) { background: #FFD700; } /* Gold */
-.team-box:nth-child(5) { background: #C70039; } /* Dark Red */
-team-box:nth-child(6) { background: #900C3F; } /* Maroon */
-.team-box:nth-child(7) { background: #581845; } /* Dark Purple */
-.team-box:nth-child(8) { background: #FF8C00; } /* Orange */
 
 /* Team Box Styling */
 .team-box {
@@ -239,6 +236,7 @@ team-box:nth-child(6) { background: #900C3F; } /* Maroon */
     flex-direction: column;
     align-items: center;
     text-align: center;
+    align-content: center;
 }
 
 
